@@ -5,7 +5,7 @@ with customers as (
         first_name,
         last_name
 
-    from tah.customers
+    from {{ source('tah', 'customers') }}
 
 )
 select * from customers

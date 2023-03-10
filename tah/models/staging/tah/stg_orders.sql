@@ -6,7 +6,7 @@ with orders as (
         order_date,
         status
 
-    from tah.orders
+    from {{ source('tah', 'orders') }}
 
 )
 select * from orders
